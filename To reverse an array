@@ -1,0 +1,33 @@
+import java.util.Scanner;
+public class Main
+{
+	public static void main(String[] args) {
+	    int counter,i=0,j=0,temp;
+		Scanner sc = new Scanner(System.in);
+		int [] array = new int[10];
+		System.out.println("Enter number of elements:");
+		counter = sc.nextInt();
+        System.out.println("Enter the elements:");
+        for(i=0;i<counter;i++)
+        {
+            array[i]=sc.nextInt();
+        }
+		j=i-1;
+		i=0;
+		sc.close();
+		while(i<j)
+		{
+		    temp = array[i];
+		    array[i]=array[j];
+		    array[j]=temp;
+		    i++;
+		    j--;
+		}
+		System.out.println("REversed array:");
+		for(i=0;i<counter;i++)
+        {
+            System.out.println(array[i]+" ");
+        }
+		
+	}
+}
